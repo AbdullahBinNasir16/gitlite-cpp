@@ -1,3 +1,5 @@
+# === Standard C++ / IDE Rules ===
+
 # Prerequisites
 *.d
 
@@ -39,3 +41,28 @@
 
 # debug information files
 *.dwo
+
+# VS Code specific
+.vscode/
+.history/
+*.log
+
+# === GitLite Project Specific Rules ===
+
+# Ignore the actual tree data (The "File-Backed" persistence)
+# This prevents thousands of small node files from being uploaded [cite: 68, 81]
+/nodes/
+/repo_data/
+
+# Ignore the physical branch folders created by the system [cite: 85, 88, 111]
+/branches/
+
+# Ignore database state/persistence files [cite: 112]
+*.bin
+*.dat
+repo_data.txt
+
+# OS generated files
+Thumbs.db
+desktop.ini
+.DS_Store
